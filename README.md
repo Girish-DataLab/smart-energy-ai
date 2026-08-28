@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-2.x-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![Scikit-Learn](https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=for-the-badge)](LICENSE)
 
 An end-to-end Machine Learning web application designed to predict real-time electrical power consumption, detect load anomalies, calculate estimated electricity bills and carbon footprints, and deliver actionable energy-saving tips through an interactive analytics dashboard.
 
@@ -169,7 +169,7 @@ The training pipeline is configured for individual household electric power cons
 ---
 
 ## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Copyright (c) 2026 Girish S (@Girish-DataLab). All rights reserved. Proprietary and confidential. See the [LICENSE](LICENSE) file for details.
 
 ---
 
