@@ -1,0 +1,201 @@
+/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#0f172a,#020617);
+    color: white;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+    display: flex;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: rgba(2,6,23,0.95);
+    padding: 25px;
+    box-shadow: 5px 0 20px rgba(0,0,0,0.5);
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: #94a3b8;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #38bdf8;
+    transform: translateX(5px);
+}
+
+/* ===== MAIN ===== */
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badge {
+    background: #22c55e;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    animation: pulse 2s infinite;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.6);
+}
+
+.hero {
+    text-align: center;
+}
+
+/* ===== INPUT ===== */
+.input-card input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+    width: 150px;
+}
+
+/* ===== BUTTON ===== */
+button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg,#3b82f6,#22c55e);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Ripple effect */
+button::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+button:active::after {
+    width: 200px;
+    height: 200px;
+}
+
+/* ===== KPI GRID ===== */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+/* KPI CARDS */
+.kpi {
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.kpi p {
+    font-size: 22px;
+}
+
+/* Gradient types */
+.kpi.power {
+    background: linear-gradient(135deg,#22c55e,#16a34a);
+}
+.kpi.bill {
+    background: linear-gradient(135deg,#f59e0b,#ea580c);
+}
+.kpi.carbon {
+    background: linear-gradient(135deg,#38bdf8,#0ea5e9);
+}
+.kpi.model {
+    background: linear-gradient(135deg,#a855f7,#7c3aed);
+}
+
+/* Hover glow */
+.kpi:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(255,255,255,0.25);
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+/* ===== CHARTS ===== */
+.chart canvas {
+    background: #020617;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+/* ===== INSIGHTS ===== */
+.insights p {
+    margin: 5px 0;
+}
+
+#tip {
+    color: #22c55e;
+}
+
+#anomaly {
+    color: #f43f5e;
+}
+
+/* ===== LOADING ===== */
+#loading {
+    display: none;
+    color: #38bdf8;
+    animation: pulse 1s infinite;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Energy AI Dashboard</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>⚡ Energy AI</h2>
+
+        <a href="/dashboard">📊 Dashboard</a>
+        <a href="/download">⬇ Download</a>
+        <a href="/logout">🚪 Logout</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <h1>Energy Analytics Dashboard</h1>
+
+        <!-- HEADER CARD -->
+        <div class="card">
+            <h2>📊 Smart Energy Analytics</h2>
+            <p>
+                Real-time energy prediction and optimization system powered by machine learning.
+            </p>
+        </div>
+
+        <!-- INPUT SECTION -->
+        <div class="card">
+
+            <h3>⚡ Prediction Panel</h3>
+
+            <form id="predictForm">
+                <input type="number" id="voltage" placeholder="Voltage (V)" required>
+                <input type="number" id="intensity" placeholder="Current (A)" required>
+                <button type="submit">Predict</button>
+            </form>
+
+            <p id="loading">⏳ Processing...</p>
+
+        </div>
+
+        <!-- STATS CARDS -->
+        <div class="grid">
+
+            <div class="stat-card">
+                <h4>⚡ Power (kW)</h4>
+                <p id="power">--</p>
+            </div>
+
+            <div class="stat-card">
+                <h4>💰 Estimated Bill</h4>
+                <p id="bill">--</p>
+            </div>
+
+            <div class="stat-card">
+                <h4>🌱 Carbon Emission</h4>
+                <p id="carbon">--</p>
+            </div>
+
+            <div class="stat-card">
+                <h4>🤖 Best Model</h4>
+                <p id="bestModel">--</p>
+            </div>
+
+        </div>
+
+        <!-- INSIGHTS -->
+        <div class="card">
+            <h3>🧠 AI Insights</h3>
+
+            <p><b>Tip:</b> <span id="tip">--</span></p>
+            <p><b>Anomaly:</b> <span id="anomaly">--</span></p>
+
+        </div>
+
+        <!-- CHARTS -->
+        <div class="grid">
+
+            <div class="card">
+                <h3>📊 Power vs Bill</h3>
+                <canvas id="barChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h3>📈 Prediction Trend</h3>
+                <canvas id="lineChart"></canvas>
+            </div>
+
+        </div>
+
+        <!-- HISTORY -->
+        <div class="card">
+            <h3>📉 Historical Usage</h3>
+            <canvas id="historyChart"></canvas>
+        </div>
+
+        <!-- FUTURE -->
+        <div class="card">
+            <h3>🔮 Future Forecast</h3>
+            <canvas id="futureChart"></canvas>
+        </div>
+
+    </main>
+
+</div>
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
